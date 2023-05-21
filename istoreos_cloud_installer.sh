@@ -7,7 +7,7 @@ download() {
     [ -f $IMAGE -a -f /boot/istoreos_stage2.sh ] && return 0
     local img=`wget -O- https://fw.koolcenter.com/iStoreOS/x86_64/version.latest | head -1 | sed -E 's/.*\((.+)\).*/\1/'`
     [ -z "$img" ] && exit 1
-    wget -O $IMAGE "https://fw.koolcenter.com/iStoreOS/x86_64/$img" || exit 1
+    wget -O $IMAGE "https://fw0.koolcenter.com/iStoreOS/x86_64/istoreos-21.02.3-2023051913-x86-64-squashfs-combined.img.gz" || exit 1
 }
 
 create_stage2() {
